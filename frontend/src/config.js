@@ -1,5 +1,5 @@
 export const config = {
-    url : "http://localhost:5000",
+    url : "http://localhost:3000",
     typ : "jwt",
     hash : ""
 }

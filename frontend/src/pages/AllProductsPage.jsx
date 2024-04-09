@@ -55,7 +55,7 @@ const AllProductsPage = (props) => {
     useEffect(function () {
         const fetchValues = async function () {
             setIsLoading(true);
-            const res = await fetch(`${config.url}/products`);
+            const res = await fetch(`${config.url}/product`);
             const data = await res.json();
             setValue(data);
             setIsLoading(false);
@@ -91,7 +91,7 @@ const AllProductsPage = (props) => {
 
                             {values.filter((value)=> (value.cate_id >= min)&&(value.cate_id < max)).map((value) => {
                                 
-                                return (<Product key={value._id} value={value} />)
+                                return (<Product key={value.id} value={value} />)
                             })}
 
                             <div className="btn active btn-danger btn-lg my-5">Hiện thêm sản phẩm</div>

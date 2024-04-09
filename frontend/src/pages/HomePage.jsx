@@ -14,7 +14,7 @@ const HomePage = () => {
     useEffect(function(){
         const fetchValues = async function(){
             setIsLoading(true);
-            const res = await fetch(`${config.url}/products`);
+            const res = await fetch(`${config.url}/product`);
             const data = await res.json();
             setValue(data);
             setIsLoading(false);
